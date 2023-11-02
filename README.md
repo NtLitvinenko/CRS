@@ -29,4 +29,3 @@ for x in img:
 Window.print()
 
 ```
-
