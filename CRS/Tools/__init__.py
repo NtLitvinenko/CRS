@@ -1,5 +1,3 @@
-from PIL import Image
-
 class ImageError(Exception): pass
 
 class Image:
