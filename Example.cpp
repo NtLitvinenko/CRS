@@ -6,7 +6,7 @@ using namespace std;
 
 int main(){
     system("chcp 65001 > nul");
-    Win *pixs = new Win(120, 30, "Bussy");
+    Win *pixs = new Win(120, 30, "CRS_Window");
     using namespace std::this_thread; // sleep_for, sleep_until
     using namespace std::chrono; // nanoseconds, system_clock, seconds
 
