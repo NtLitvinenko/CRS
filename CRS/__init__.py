@@ -20,4 +20,41 @@ class Win:
                     print(self.Win[i][j])
     def __repr__(self):
         return f"Win(x={self.x}, y={self.y}, name='{self.name}')"
-        
+
+class Sprite:
+    def __init__(self):
+        pass
+
+    def UpdateSymbols(self, SpriteSymbols):
+        """
+
+        :param SpriteSymbols: List like [['0', '1', '2'], ['3', '4', '5'], ['6', '7', '8']]
+        Update symbols of Sprite
+        """
+        self.SpriteSymbols = SpriteSymbols
+    def Render(self, Display1, StartsFrom=0, StartsX=0):
+        """
+        :param Display1: CRS' Window
+        :param StartsFrom: Left corner of sprite (y)
+        :param StartsX: Left corner of sprite (x)
+        :return:
+        Return nothing if all good
+        """
+        if StartsFrom + len(self.SpriteSymbols) > Display1.y or StartsX + len(self.SpriteSymbols[0]) > Display1.x:
+            return
+        YC = -1
+        self.SFY = StartsFrom
+        self.SFX = StartsX
+        self.LY = len(self.SpriteSymbols)
+        self.LX = len(self.SpriteSymbols[0])
+        for i in self.SpriteSymbols:
+            YC += 1
+            XC = -1
+            for j in i:
+                XC += 1
+                Display1.lst[YC + StartsFrom][XC + StartsX] = self.SpriteSymbols[YC][XC]
+
+    def Clear(self, Display1, SFN):
+        for i in range(self.LY):
+            for j in range(self.LX):
+                Display1.lst[self.SFY + i][self.SFX + j] = SFN
