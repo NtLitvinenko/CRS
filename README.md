@@ -1,6 +1,6 @@
 # CRS - New innovation project
 
-<img height="300" src="Running_Example_Code.PNG" title="Running Example Code" width="600"/></img>
+<img height="300" src="./images/Running_Example_Code.PNG" title="Running Example Code" width="600"/></img>
 
 CRS is Console Render System.<br>
 CRS is needed to create COLORED games and projects in CONSOLE.<br>
@@ -34,7 +34,7 @@ Example code on C++:
 ```
 // Cpp Code by NTLDev
 #include <iostream>
-#include "CRS.h"
+#include "CRS++/CRS.h"
 #include <thread>
 #include <chrono>
 using namespace std;
